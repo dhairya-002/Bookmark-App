@@ -56,22 +56,35 @@ function Dashboard({ user, logout }: any) {
   const [title, setTitle] = useState('')
   const [url, setUrl] = useState('')
 
+ 
+
   useEffect(() => {
-    fetchBookmarks()
+  fetchBookmarks()
 
-    const channel = supabase
-      .channel('realtime bookmarks')
-      .on(
-        'postgres_changes',
-        { event: '*', schema: 'public', table: 'bookmarks' },
-        () => fetchBookmarks()
-      )
-      .subscribe()
+  const channel = supabase
+    .channel('bookmarks-changes')
+    .on(
+      'postgres_changes',
+      {
+        event: '*',
+        schema: 'public',
+        table: 'bookmarks',
+        filter: `user_id=eq.${user.id}`, // 🔥 VERY IMPORTANT
+      },
+      () => {
+        fetchBookmarks()
+      }
+    )
+    .subscribe((status) => {
+      console.log('Realtime status:', status)
+    })
 
-    return () => {
-      supabase.removeChannel(channel)
-    }
-  }, [])
+  return () => {
+    supabase.removeChannel(channel)
+  }
+}, [user.id])
+
+
 
   const fetchBookmarks = async () => {
     const { data } = await supabase
