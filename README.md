@@ -134,8 +134,8 @@ bookmark-manager/
     ├── .env.local                   # Environment variables (not in git)
     ├── next.config.js               # Next.js configuration
 
-├── tailwind.config.ts           # Tailwind CSS configuration
+    ├── tailwind.config.ts           # Tailwind CSS configuration
 
-├── package.json                 # Dependencies
+    ├── package.json                 # Dependencies
 
-└── README.md                    # This file
+    └── README.md                    # This file
