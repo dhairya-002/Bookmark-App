@@ -24,7 +24,7 @@ A modern, real-time bookmark manager built with Next.js and Supabase. Users can 
 
 ## 🚀 Live Demo
 
-[View Live App](https://your-app-name.vercel.app) *(Replace with your actual Vercel URL)*
+[View Live App](https://bookmark-app-theta-three.vercel.app/) 
 
 ## 📋 Prerequisites
 
@@ -35,33 +35,6 @@ Before you begin, ensure you have:
 - A Vercel account ([vercel.com](https://vercel.com))
 - Google Cloud Console project (for OAuth)
 
-## 🏗️ Local Setup
-
-### 1. Clone the Repository
-
-```bash
-git clone <your-repo-url>
-cd bookmark-manager
-```
-
-### 2. Install Dependencies
-
-```bash
-npm install
-```
-
-### 3. Set Up Supabase
-
-## 📖 How to Use
-
-1. **Sign In:** Click "Sign in with Google" and authenticate
-2. **Add Bookmark:** 
-   - Enter a title (e.g., "My Portfolio")
-   - Enter a URL (e.g., "https://example.com")
-   - Click "Add Bookmark"
-3. **View Bookmarks:** All your bookmarks are displayed below
-4. **Delete Bookmark:** Click the "Delete" button next to any bookmark
-5. **Real-time Sync:** Open the app in multiple tabs - changes appear instantly!
 
 ## 🐛 Problems Encountered & Solutions
 
@@ -150,6 +123,7 @@ useEffect(() => {
 ## 📁 Project Structure
 
 bookmark-manager/
+
 ├── app/
 │   ├── lib/
 │   │   └── supabase.ts          # Supabase client configuration
