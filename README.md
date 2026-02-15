@@ -125,14 +125,25 @@ useEffect(() => {
 bookmark-manager/
 
 ├── app/
+
 │   ├── lib/
+
 │   │   └── supabase.ts          # Supabase client configuration
+
 │   ├── globals.css              # Global styles
+
 │   ├── layout.tsx               # Root layout
+
 │   └── page.tsx                 # Main app component
+
 ├── public/                      # Static assets
+
 ├── .env.local                   # Environment variables (not in git)
+
 ├── next.config.js               # Next.js configuration
+
 ├── tailwind.config.ts           # Tailwind CSS configuration
+
 ├── package.json                 # Dependencies
+
 └── README.md                    # This file
